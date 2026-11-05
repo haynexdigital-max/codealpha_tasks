@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="music-player">
+
+        <header class="player-header">
+            <h1>Music Player</h1>
+            <p>Your music, your mood.</p>
+        </header>
+
+        <div class="album-art">
+            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=500"
+                 alt="Album Cover">
+        </div>
+
+        <div class="song-info">
+            <h2 id="song-title">Song Title</h2>
+            <p id="artist-name">Artist Name</p>
+<p id="playback-status" aria-live="polite"></p>
+        </div>
+
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input type="range" id="progress" min="0" max="100" value="0">
+            <span id="duration">0:00</span>
+        </div>
+
+        <div class="controls">
+            <button id="prev-btn" aria-label="Previous song">⏮</button>
+            <button id="play-btn" aria-label="Play or pause">▶</button>
+            <button id="next-btn" aria-label="Next song">⏭</button>
+        </div>
+
+        <div class="volume-control">
+            <span>🔊</span>
+            <input type="range" id="volume"
+                   min="0" max="1" step="0.01" value="0.7">
+        </div>
+
+        
+<div class="extra-controls">
+    <button id="shuffle-btn" class="mode-btn" title="Shuffle" aria-pressed="false">
+        <span>🔀</span> Shuffle
+    </button>
+
+    <button id="repeat-btn" class="mode-btn" title="Repeat" aria-pressed="false">
+        <span>🔁</span> Repeat
+    </button>
+</div>
+
+
+        <section class="playlist-section">
+            <div class="playlist-heading">
+                <h3>My Playlist</h3>
+                <span id="song-count"></span>
+            </div>
+
+            <div id="playlist" class="playlist">
+            </div>
+        </section>
+
+        
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
